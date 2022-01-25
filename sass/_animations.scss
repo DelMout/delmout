@@ -1,0 +1,47 @@
+@keyframes underline {
+	0% {
+		width: 0%;
+	}
+	70% {
+		width: 100%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+@keyframes appear {
+	0% {
+		transform: rotate3d(0, 1, 0, -89deg);
+	}
+
+	100% {
+		transform: rotate3d(0);
+	}
+}
+@keyframes opac {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fall {
+	0% {
+		transform: translateY(-60vw) rotateY(-35deg) rotateX(15deg);
+	}
+
+	100% {
+		transform: translateY(0) rotateY(-35deg) rotateX(15deg);
+	}
+}
+@keyframes blind {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}

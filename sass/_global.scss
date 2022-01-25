@@ -1,0 +1,24 @@
+body {
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: "acme", Arial, Helvetica, sans-serif;
+}
+
+a:link,
+a:visited,
+a:active,
+a {
+	color: white;
+}
+
+#real h2,
+#fonc h2,
+#tech h2 {
+	margin: auto;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	position: relative;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 160px #fff;
+	/* background-color: yellow; */
+}
