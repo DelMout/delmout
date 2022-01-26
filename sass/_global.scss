@@ -22,3 +22,11 @@ a {
 	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 160px #fff;
 	/* background-color: yellow; */
 }
+
+.back {
+	width: 2rem;
+	cursor: pointer;
+	position: absolute;
+	top: 106vh;
+	right: 10rem;
+}

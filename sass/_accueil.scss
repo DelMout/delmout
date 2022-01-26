@@ -14,14 +14,14 @@
 #moi {
 	width: 15%;
 	/* background-color: green; */
+	& img {
+		-webkit-filter: hue-rotate(-160deg) drop-shadow(4px 0px 4px #fff); /* Chrome, Safari, Opera */
+		filter: hue-rotate(-160deg) drop-shadow(4px 0px 4px #fff);
+		width: 100%;
+		animation: appear 4s ease-in-out;
+	}
 }
 
-img {
-	-webkit-filter: hue-rotate(-160deg) drop-shadow(4px 0px 4px #fff); /* Chrome, Safari, Opera */
-	filter: hue-rotate(-160deg) drop-shadow(4px 0px 4px #fff);
-	width: 100%;
-	animation: appear 4s ease-in-out;
-}
 #delphine {
 	text-align: center;
 	margin-top: 0;
@@ -40,6 +40,12 @@ img {
 	flex-direction: column;
 	justify-content: center;
 	font-size: 1.5rem;
+	& span {
+		width: 0.6rem;
+		height: 0.6rem;
+		background-color: white;
+		display: inline-block;
+	}
 }
 #creaS {
 	/* background-color: yellow; */
@@ -80,12 +86,6 @@ h2 {
 	}
 }
 
-span {
-	width: 0.6rem;
-	height: 0.6rem;
-	background-color: white;
-	display: inline-block;
-}
 #menu {
 	/* background-color: pink; */
 	width: 50%;

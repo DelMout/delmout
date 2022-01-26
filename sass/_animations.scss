@@ -45,3 +45,23 @@
 		opacity: 0;
 	}
 }
+@keyframes vavient {
+	0% {
+		transform: translateX(0vw);
+	}
+
+	100% {
+		transform: translateX(2vw);
+	}
+}
+@keyframes details {
+	0% {
+		transform: translateY(-20vh);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0vh);
+		opacity: 1;
+	}
+}
