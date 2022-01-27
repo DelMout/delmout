@@ -71,3 +71,37 @@ projSept.addEventListener("mouseover", function () {
 projSept.addEventListener("mouseleave", function () {
 	detail.innerHTML = "";
 });
+
+//* Pointer on icon menu to go to "Realisations" or "Fonctionnalités" or "Technologies"
+const menuMini = document.getElementsByClassName("menumini");
+const menuDeroul = document.getElementsByClassName("menu");
+// For the first
+const firstMenuMini = menuMini[0];
+const firstMenuDeroul = menuDeroul[0];
+firstMenuMini.addEventListener("click", function () {
+	firstMenuDeroul.style.display = "block";
+	function disappear() {
+		firstMenuDeroul.style.display = "none";
+	}
+	setTimeout(disappear, 4000);
+});
+// For the second
+const secondMenuMini = menuMini[1];
+const secondMenuDeroul = menuDeroul[1];
+secondMenuMini.addEventListener("click", function () {
+	secondMenuDeroul.style.display = "block";
+	function disappear() {
+		secondMenuDeroul.style.display = "none";
+	}
+	setTimeout(disappear, 4000);
+});
+// For the third
+const thirdMenuMini = menuMini[2];
+const thirdMenuDeroul = menuDeroul[2];
+thirdMenuMini.addEventListener("click", function () {
+	thirdMenuDeroul.style.display = "block";
+	function disappear() {
+		thirdMenuDeroul.style.display = "none";
+	}
+	setTimeout(disappear, 4000);
+});

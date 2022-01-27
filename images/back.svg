@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   viewBox="0 0 138 138"
-   style="overflow: hidden; position: relative;"
-   width="138"
+   viewBox="0 0 110.4584 110.45839"
+   style="overflow:hidden"
+   width="110.4584"
    version="1.1"
-   height="138"
+   height="110.4584"
    id="svg42"
    sodipodi:docname="back.svg"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
@@ -22,14 +22,19 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="6.0289855"
-     inkscape:cx="68.917067"
-     inkscape:cy="69.082933"
+     inkscape:cx="66.097356"
+     inkscape:cy="68.253606"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg42" />
+     inkscape:current-layer="svg42"
+     width="137px"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <desc
      id="desc29">Created with Raphaël 2.1.0</desc>
   <defs
@@ -56,17 +61,16 @@
      stroke-width="1"
      fill-opacity="1"
      opacity="1"
-     d="m 13.7708,69 c 0,30.5026 24.7266,55.2292 55.2292,55.2292 30.5026,0 55.2292,-24.7266 55.2292,-55.2292 C 124.2292,38.4974 99.5026,13.7708 69,13.7708 38.4974,13.7708 13.7708,38.4974 13.7708,69 Z M 105.9512,77.873 92.5068,91.3098 68.9962,67.7992 45.4856,91.3098 32.045,77.873 68.9962,40.9256 Z"
+     d="m 0,55.2292 c 0,30.5026 24.7266,55.2292 55.2292,55.2292 30.5026,0 55.2292,-24.7266 55.2292,-55.2292 C 110.4584,24.7266 85.7318,0 55.2292,0 24.7266,0 0,24.7266 0,55.2292 Z M 92.1804,64.1022 78.736,77.539 55.2254,54.0284 31.7148,77.539 18.2742,64.1022 55.2254,27.1548 Z"
      stroke="none"
      fill="url(#188190-_03CA45-_AF00AA)"
      style="opacity:1;fill:#ffffff;fill-opacity:1"
      id="path38" />
   <path
-     transform="matrix(1,0,0,1,0,0)"
      fill-opacity="0.3"
-     d="M0,0"
+     d="M -0.16983845,-0.83329998"
      stroke="none"
      fill="#ffffff"
-     style="fill-opacity: 0.3;"
+     style="fill-opacity:0.3"
      id="path40" />
 </svg>
