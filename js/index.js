@@ -6,7 +6,7 @@ const detail = document.getElementById("subsites");
 const projUn = document.querySelector("#sites a:nth-child(1)");
 projUn.addEventListener("mouseover", function () {
 	detail.innerHTML =
-		"<p> Réservation de commandes de produits alimentaires locaux<br/>pour livraison des commandes 1 fois par semaine au magasin.<br/>Gestion des stocks (alerte stock limité).<br/>Gestion des jours ouvrables pour les commandes par produit.</p>";
+		"<p> Réservation de commandes de produits alimentaires locaux<br/>pour livraison des commandes 1 fois par semaine au magasin.<br/>Gestion des stocks (alerte stock limité).<br/>Gestion des jours ouvrables pour les commandes par produit.<br/>Téléchargement de la synthèse des commandes vers Excel.</p>";
 });
 projUn.addEventListener("mouseleave", function () {
 	detail.innerHTML = "";
@@ -104,4 +104,25 @@ thirdMenuMini.addEventListener("click", function () {
 		thirdMenuDeroul.style.display = "none";
 	}
 	setTimeout(disappear, 4000);
+});
+
+//* Carousel Fonctionnalités
+//selec div in carousel
+const boxesCarousel = document.querySelectorAll("#develop>div");
+const boxUn = boxesCarousel[0];
+const boxDeux = boxesCarousel[1];
+const boxTrois = boxesCarousel[2];
+const boxQuatre = boxesCarousel[3];
+const boCinq = boxesCarousel[4];
+const boxSix = boxesCarousel[5];
+const boxSept = boxesCarousel[6];
+function nextOne(uno, dos) {
+	uno.style.display = "none";
+	dos.style.display = "block";
+}
+boxUn.addEventListener("click", function () {
+	nextOne(boxUn, boxDeux);
+});
+boxDeux.addEventListener("click", function () {
+	nextOne(boxDeux, boxTrois);
 });
