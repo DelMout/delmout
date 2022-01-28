@@ -40,7 +40,7 @@ a {
 	position: absolute;
 	right: 1rem;
 	width: 8rem;
-	background-color: grey;
+	background-color: rgba(100, 100, 100, 0.6);
 	border-radius: 10px;
 	padding-left: 1rem;
 	display: none;
@@ -101,5 +101,55 @@ a {
 		url("../images/caddie.jpg");
 	background-size: 25% 25%;
 	height: 100vh;
-	background-color: black;
+}
+#social {
+	background-image: linear-gradient(to bottom, rgba(14, 43, 80, 0.8), rgba(14, 43, 80, 0.8)),
+		url("../images/socialnet.jpg");
+	background-size: 100% 100%;
+	height: 100vh;
+}
+#sondage {
+	background-image: linear-gradient(to bottom, rgba(14, 43, 80, 0.8), rgba(14, 43, 80, 0.8)),
+		url("../images/sondage.jpg");
+	background-size: 25% 25%;
+	height: 100vh;
+}
+#envoipdf {
+	background-image: linear-gradient(to bottom, rgba(14, 43, 80, 0.8), rgba(14, 43, 80, 0.8)),
+		url("../images/convention_blur.jpg");
+	background-size: 100% 100%;
+	height: 100vh;
+}
+#stock {
+	background-image: linear-gradient(to bottom, rgba(14, 43, 80, 0.8), rgba(14, 43, 80, 0.8)),
+		url("../images/livre.jpg");
+	background-size: 100% 100%;
+	height: 100vh;
+}
+#pro {
+	background-color: yellow;
+	width: 80%;
+	margin: auto;
+	margin-top: 40vh;
+	height: 10vh;
+	transform: rotateZ(-10deg);
+	color: blue;
+	font-size: 2rem;
+	border-radius: 8px;
+	display: flex;
+	& p {
+		margin: auto;
+	}
+}
+#email {
+	background-image: linear-gradient(to bottom, rgba(14, 43, 80, 0.8), rgba(14, 43, 80, 0.8)),
+		url("../images/email.jpg");
+	background-size: 100% 100%;
+	height: 100vh;
+}
+#planning {
+	background-image: linear-gradient(to bottom, rgba(14, 43, 80, 0.8), rgba(14, 43, 80, 0.8)),
+		url("../images/calendar.jpg");
+	background-size: 100% 100%;
+	height: 100vh;
 }
