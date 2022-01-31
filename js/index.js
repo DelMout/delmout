@@ -113,16 +113,49 @@ const boxUn = boxesCarousel[0];
 const boxDeux = boxesCarousel[1];
 const boxTrois = boxesCarousel[2];
 const boxQuatre = boxesCarousel[3];
-const boCinq = boxesCarousel[4];
+const boxCinq = boxesCarousel[4];
 const boxSix = boxesCarousel[5];
 const boxSept = boxesCarousel[6];
+const allDiv = [boxUn, boxDeux, boxTrois, boxQuatre, boxCinq, boxSix, boxSept];
 function nextOne(uno, dos) {
 	uno.style.display = "none";
 	dos.style.display = "block";
 }
-boxUn.addEventListener("click", function () {
-	nextOne(boxUn, boxDeux);
+const pushRight = document.getElementById("right");
+pushRight.addEventListener("click", function () {
+	if (localStorage.getItem("projet") === null) {
+		localStorage.setItem("projet", 1);
+	} else {
+		if (localStorage.getItem("projet") >= 6) {
+			localStorage.setItem("projet", 6);
+		} else {
+			localStorage.setItem("projet", parseInt(localStorage.getItem("projet")) + 1);
+		}
+	}
+	// localStorage.clear();
+	const uno = allDiv[parseInt(localStorage.getItem("projet")) - 1];
+	const dos = allDiv[parseInt(localStorage.getItem("projet"))];
+	nextOne(uno, dos);
 });
-boxDeux.addEventListener("click", function () {
-	nextOne(boxDeux, boxTrois);
+
+const pushLeft = document.getElementById("left");
+pushLeft.addEventListener("click", function () {
+	if (localStorage.getItem("projet") === null) {
+		localStorage.setItem("projet", 0);
+	} else {
+		if (localStorage.getItem("projet") <= 0) {
+			localStorage.setItem("projet", 0);
+		} else {
+			localStorage.setItem("projet", parseInt(localStorage.getItem("projet")) - 1);
+		}
+	}
+	// localStorage.clear();
+	const uno = allDiv[parseInt(localStorage.getItem("projet")) + 1];
+	const dos = allDiv[parseInt(localStorage.getItem("projet")) + 0];
+	nextOne(uno, dos);
+});
+
+// Clear localStorage si page reload
+document.addEventListener("DOMContentLoaded", function () {
+	localStorage.clear();
 });

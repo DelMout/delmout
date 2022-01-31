@@ -90,7 +90,7 @@ h2 {
 	/* background-color: pink; */
 	width: 50%;
 	perspective: 1000px;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	display: flex;
 	justify-content: center;
 	/* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 160px #fff; */
@@ -108,7 +108,9 @@ h2 {
 		background-color: #101d43;
 		background-image: linear-gradient(135deg, #075a76, #101d43);
 		width: 16rem;
+		height: 6rem;
 		text-decoration: none;
+		text-transform: uppercase;
 
 		&:nth-child(1) {
 			top: -72px;
@@ -139,5 +141,6 @@ h2 {
 
 	& div p {
 		margin-left: 2rem;
+		margin-top: 50%;
 	}
 }

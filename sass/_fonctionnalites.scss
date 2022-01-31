@@ -15,7 +15,7 @@
 			margin-right: auto;
 			// margin-left: 1rem;
 			// margin-right: 1rem;
-			background-color: rgba(0, 0, 0, 0.7);
+			// background-color: rgba(0, 0, 0, 0.7);
 			&:nth-child(2),
 			&:nth-child(3),
 			&:nth-child(4),
@@ -26,14 +26,18 @@
 			}
 		}
 		& h3 {
-			color: rgba(0, 0, 0, 0);
-			background-color: white;
 			color: black;
 			mix-blend-mode: screen;
+			background-color: white;
 			font-size: 2rem;
 			text-align: center;
 			margin-bottom: 0;
 			margin-top: 0;
+			& + div {
+				background-color: rgba(14, 43, 80, 0.4);
+				padding-top: 1rem;
+				padding-bottom: 1rem;
+			}
 		}
 		ul {
 			font-size: 1.2rem;
@@ -41,5 +45,23 @@
 				margin-top: 0.4rem;
 			}
 		}
+	}
+	& .push {
+		width: 3rem;
+		cursor: pointer;
+		position: absolute;
+		top: 250vh;
+		opacity: 0.5;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	& .left {
+		transform: rotateZ(-90deg);
+		left: 3vw;
+	}
+	& .right {
+		transform: rotateZ(90deg);
+		right: 3vw;
 	}
 }
