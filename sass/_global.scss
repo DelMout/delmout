@@ -88,6 +88,34 @@ a {
 	top: 308vh;
 }
 
+//* Logo DMDW
+.logo {
+	width: 3%;
+	position: absolute;
+	left: 3vw;
+	cursor: pointer;
+}
+.logoaccueil {
+	top: 3vh;
+}
+.logoreal {
+	top: 103vh;
+}
+.logofonc {
+	top: 203vh;
+	width: 3%;
+	position: absolute;
+	left: 3vw;
+	cursor: pointer;
+}
+.logotech {
+	top: 303vh;
+	width: 3%;
+	position: absolute;
+	left: 3vw;
+	cursor: pointer;
+}
+
 //* VIDEO
 .video {
 	display: flex;
