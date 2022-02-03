@@ -1,15 +1,15 @@
 #accueil {
 	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 		url("../images/computers.jpg");
-	background-size: 100%;
+	background-size: 100% 130%;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 }
 #une {
 	display: flex;
-	/* background-color: yellow; */
-	margin-top: 40vh;
+	// background-color: yellow;
+	margin-top: 10%;
 }
 #moi {
 	width: 15%;
@@ -22,24 +22,17 @@
 	}
 }
 
-#delphine {
-	text-align: center;
-	margin-top: 0;
-	animation: opac 7s ease-in-out;
-	letter-spacing: 0.1rem;
-	padding-left: 1.5rem;
-	font-size: 1.5rem;
-}
 #crea {
-	/* background-color: red; */
-	width: 30%;
+	// background-color: red;
+	width: 40%;
 	margin: auto;
-	margin-left: 8rem;
+	margin-top: 4rem;
+	margin-left: 5rem;
 	text-align: left;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	font-size: 1.5rem;
+	line-height: 6rem;
 	& span {
 		width: 0.6rem;
 		height: 0.6rem;
@@ -47,17 +40,7 @@
 		display: inline-block;
 	}
 }
-#creaS {
-	/* background-color: yellow; */
-	margin-bottom: 0;
-	margin-top: 4rem;
-}
-#creaA {
-	margin-top: 1rem;
-}
-h1 {
-	text-align: center;
-}
+
 #del {
 	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 160px #fff;
 	-webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
@@ -87,13 +70,12 @@ h2 {
 }
 
 #menu {
-	/* background-color: pink; */
+	// background-color: pink;
 	width: 50%;
 	perspective: 1000px;
 	font-size: 1.5rem;
 	display: flex;
 	justify-content: center;
-	/* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 160px #fff; */
 	& a {
 		display: grid;
 		grid-template-columns: 20% auto;
@@ -114,7 +96,6 @@ h2 {
 
 		&:nth-child(1) {
 			top: -72px;
-			/* top: -112px; */
 			z-index: 2;
 			animation-name: blind, fall;
 			animation-duration: 4s, 4s;
@@ -171,9 +152,8 @@ h2 {
 	margin: auto;
 	display: flex;
 	flex-direction: column;
-	position: absolute;
-	top: 2rem;
-	left: 46.5vw;
+	align-items: center;
+	margin-top: 2rem;
 	// background-color: aqua;
 	& div {
 		display: flex;
@@ -193,21 +173,27 @@ h2 {
 		}
 	}
 }
+#cadre_delphmout {
+	display: flex;
+	justify-content: center;
+}
 
 #delphmout {
-	width: 20vw;
+	// max-width: 20vw;
+	width: 380px;
 	margin: auto;
 	font-size: 3rem;
 	position: absolute;
 	top: 10rem;
-	left: 40vw;
+	// left: 40vw;
+	// background-color: brown;
+
 	& > p {
 		margin-bottom: 10px;
 	}
 	& span {
 		color: #538cd0;
 		text-shadow: 2px 0px 0px #fff;
-		// text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 160px #fff;
 	}
 	& #devweb {
 		// background-color: brown;
@@ -218,7 +204,7 @@ h2 {
 			margin-left: 9px;
 			transform: rotateZ(180deg) translateY(5px);
 			color: #538cd0;
-			text-shadow: 2px 0px 0px #fff;
+			text-shadow: -2px 0px 0px #fff;
 		}
 	}
 	& #line {
@@ -226,5 +212,112 @@ h2 {
 		background-color: #fff;
 		animation: underline 3s infinite ease-out;
 		box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #fff, 0 0 16px #fff;
+	}
+}
+
+/******MEDIA QUERIES*******/
+@media only screen and (max-width: 1750px) {
+	h1 {
+		// background-color: blueviolet;
+	}
+	#crea {
+		width: 40%;
+		font-size: 1rem;
+		line-height: 3rem;
+		margin-top: 2rem;
+	}
+	#sigle {
+		font-size: 3rem;
+		margin-top: 1rem;
+		& div {
+			display: flex;
+			&:nth-child(2) {
+				margin-top: -29px;
+			}
+		}
+		& p:nth-child(2) {
+			margin-left: -5px;
+		}
+	}
+	#delphmout {
+		font-size: 2rem;
+		width: 250px;
+		top: 5rem;
+		& > p {
+			margin-bottom: 2px;
+		}
+		& #devweb {
+			letter-spacing: 1px;
+			& p:nth-child(2) {
+				transform: rotateZ(180deg) translateY(2px);
+			}
+			// background-color: blueviolet;
+		}
+		& #line {
+			margin-bottom: 10px;
+		}
+	}
+}
+@media only screen and (max-width: 992px) {
+	#accueil {
+		background-size: 100% 160%;
+	}
+	#crea {
+		font-size: 0.6rem;
+		line-height: 2rem;
+		margin-top: 1.5rem;
+	}
+	#menu {
+		font-size: 1rem;
+		& a {
+			width: 12rem;
+			height: 4rem;
+			&:nth-child(1) {
+				top: -5px;
+			}
+			&:nth-child(2) {
+				top: 85px;
+			}
+			&:nth-child(3) {
+				top: 175px;
+			}
+		}
+	}
+	#une {
+		margin-top: 20%;
+	}
+}
+@media only screen and (max-width: 670px) {
+	#une {
+		// background-color: greenyellow;
+		flex-direction: column;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 30%;
+		& #moi {
+			width: 40%;
+		}
+		& #moi {
+			margin: auto;
+		}
+		& #crea {
+			width: 100%;
+		}
+	}
+	#menu {
+		width: 100%;
+
+		font-size: 1.2rem;
+		& a {
+			&:nth-child(1) {
+				top: 20px;
+			}
+			&:nth-child(2) {
+				top: 110px;
+			}
+			&:nth-child(3) {
+				top: 200px;
+			}
+		}
 	}
 }
