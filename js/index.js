@@ -3,70 +3,77 @@
 const detail = document.getElementById("subsites");
 
 // If mouse hover the project box 1
+const un =
+	"<p> Réservation de commandes de produits alimentaires locaux<br/>pour livraison des commandes 1 fois par semaine au magasin.<br/>Gestion des stocks (alerte stock limité).<br/>Gestion des jours ouvrables pour les commandes par produit.<br/>Téléchargement de la synthèse des commandes vers Excel.</p>";
 const projUn = document.querySelector("#sites a:nth-child(1)");
 projUn.addEventListener("mouseover", function () {
-	detail.innerHTML =
-		"<p> Réservation de commandes de produits alimentaires locaux<br/>pour livraison des commandes 1 fois par semaine au magasin.<br/>Gestion des stocks (alerte stock limité).<br/>Gestion des jours ouvrables pour les commandes par produit.<br/>Téléchargement de la synthèse des commandes vers Excel.</p>";
+	detail.innerHTML = un;
 });
 projUn.addEventListener("mouseleave", function () {
 	detail.innerHTML = "";
 });
 
 // If mouse hover the project box 2
+const deux =
+	'<p> Réseau social pour salariés d\'une entreprise.<br/>Publications textes, documents, images, vidéos.<br/>Possibilité de "liker", commenter les publications.</p>';
 const projDeux = document.querySelector("#sites a:nth-child(2)");
 projDeux.addEventListener("mouseover", function () {
-	detail.innerHTML =
-		'<p> Réseau social pour salariés d\'une entreprise.<br/>Publications textes, documents, images, vidéos.<br/>Possibilité de "liker", commenter les publications.</p>';
+	detail.innerHTML = deux;
 });
 projDeux.addEventListener("mouseleave", function () {
 	detail.innerHTML = "";
 });
 
 // If mouse hover the project box 3
+const trois =
+	"<p> Questionnaire avec choix multiple, cases à cocher, champs commentaires.<br/>Données sauvegardées sur une base de données.</p>";
 const projTrois = document.querySelector("#sites a:nth-child(3)");
 projTrois.addEventListener("mouseover", function () {
-	detail.innerHTML =
-		"<p> Questionnaire avec choix multiple, cases à cocher, champs commentaires.<br/>Données sauvegardées sur une base de données.</p>";
+	detail.innerHTML = trois;
 });
 projTrois.addEventListener("mouseleave", function () {
 	detail.innerHTML = "";
 });
 
 // If mouse hover the project box 4
+const quatre =
+	"<p> Renseignement d'un formulaire.<br/>Copie du formulaire complété dans un PDF.<br/>Envoi par email du formulaire complété.</p>";
 const projQuatre = document.querySelector("#sites a:nth-child(4)");
 projQuatre.addEventListener("mouseover", function () {
-	detail.innerHTML =
-		"<p> Renseignement d'un formulaire.<br/>Copie du formulaire complété dans un PDF.<br/>Envoi par email du formulaire complété.</p>";
+	detail.innerHTML = quatre;
 });
 projQuatre.addEventListener("mouseleave", function () {
 	detail.innerHTML = "";
 });
 
 // If mouse hover the project box 5
+const cinq =
+	"<p> Liste inventaire produits.<br/>Gestion des pr<span style='font-family:helvetica'>ê</span>ts produits par les utilisateurs.</p>";
 const projCinq = document.querySelector("#sites a:nth-child(5)");
 projCinq.addEventListener("mouseover", function () {
-	detail.innerHTML =
-		"<p> Liste inventaire produits.<br/>Gestion des pr<span style='font-family:helvetica'>ê</span>ts produits par les utilisateurs.</p>";
+	detail.innerHTML = cinq;
 });
 projCinq.addEventListener("mouseleave", function () {
 	detail.innerHTML = "";
 });
 
 // If mouse hover the project box 6
+const six =
+	"<p> Envoi email à toute la liste des utilisateurs.<br/>Mise en page email anticipé avec image à télécharger.<br/>Signature email préconçu contenant image.</p>";
 const projSix = document.querySelector("#sites a:nth-child(6)");
 projSix.addEventListener("mouseover", function () {
-	detail.innerHTML =
-		"<p> Envoi email à toute la liste des utilisateurs.<br/>Mise en page email anticipé avec image à télécharger.<br/>Signature email préconçu contenant image.</p>";
+	detail.innerHTML = six;
 });
 projSix.addEventListener("mouseleave", function () {
 	detail.innerHTML = "";
 });
 
 // If mouse hover the project box 7
+const sept =
+	"<p> Choix des créneaux horaires par les administrateurs.<br/>Renseignement de leur disponibilité de chacun des utilisateurs.<br/>Synthèse du planning du groupe d'utilisateurs.</p>";
 const projSept = document.querySelector("#sites a:nth-child(7)");
 projSept.addEventListener("mouseover", function () {
-	detail.innerHTML =
-		"<p> Choix des créneaux horaires par les administrateurs.<br/>Renseignement de leur disponibilité de chacun des utilisateurs.<br/>Synthèse du planning du groupe d'utilisateurs.</p>";
+	detail.innerHTML = sept;
 });
 projSept.addEventListener("mouseleave", function () {
 	detail.innerHTML = "";
@@ -159,3 +166,138 @@ pushLeft.addEventListener("click", function () {
 document.addEventListener("DOMContentLoaded", function () {
 	localStorage.clear();
 });
+
+//! * #Realisations for format Tablet
+if (window.matchMedia("(max-width:992px)")) {
+	const selec = document.getElementById("selec");
+	selec.innerHTML = "Faire défiler les projets et cliquer sur le projet pour visionner.";
+	detail.innerHTML = un;
+
+	projDeux.style.display = "none";
+	projTrois.style.display = "none";
+	projQuatre.style.display = "none";
+	projCinq.style.display = "none";
+	projSix.style.display = "none";
+	projSept.style.display = "none";
+}
+
+//* Swipe on box of realisations
+projUn.addEventListener(
+	"touchstart",
+	function (event) {
+		touchstartX = event.changedTouches[0].screenX;
+	},
+	false
+);
+projUn.addEventListener(
+	"touchend",
+	function (event) {
+		touchendX = event.changedTouches[0].screenX;
+		handleGesture(projSept, projUn, projDeux, sept, deux);
+	},
+	false
+);
+projDeux.addEventListener(
+	"touchstart",
+	function (event) {
+		touchstartX = event.changedTouches[0].screenX;
+	},
+	false
+);
+projDeux.addEventListener(
+	"touchend",
+	function (event) {
+		touchendX = event.changedTouches[0].screenX;
+		handleGesture(projUn, projDeux, projTrois, un, trois);
+	},
+	false
+);
+projTrois.addEventListener(
+	"touchstart",
+	function (event) {
+		touchstartX = event.changedTouches[0].screenX;
+	},
+	false
+);
+projTrois.addEventListener(
+	"touchend",
+	function (event) {
+		touchendX = event.changedTouches[0].screenX;
+		handleGesture(projDeux, projTrois, projQuatre, deux, quatre);
+	},
+	false
+);
+projQuatre.addEventListener(
+	"touchstart",
+	function (event) {
+		touchstartX = event.changedTouches[0].screenX;
+	},
+	false
+);
+projQuatre.addEventListener(
+	"touchend",
+	function (event) {
+		touchendX = event.changedTouches[0].screenX;
+		handleGesture(projTrois, projQuatre, projCinq, trois, cinq);
+	},
+	false
+);
+projCinq.addEventListener(
+	"touchstart",
+	function (event) {
+		touchstartX = event.changedTouches[0].screenX;
+	},
+	false
+);
+projCinq.addEventListener(
+	"touchend",
+	function (event) {
+		touchendX = event.changedTouches[0].screenX;
+		handleGesture(projQuatre, projCinq, projSix, quatre, six);
+	},
+	false
+);
+projSix.addEventListener(
+	"touchstart",
+	function (event) {
+		touchstartX = event.changedTouches[0].screenX;
+	},
+	false
+);
+projSix.addEventListener(
+	"touchend",
+	function (event) {
+		touchendX = event.changedTouches[0].screenX;
+		handleGesture(projCinq, projSix, projSept, cinq, sept);
+	},
+	false
+);
+projSept.addEventListener(
+	"touchstart",
+	function (event) {
+		touchstartX = event.changedTouches[0].screenX;
+	},
+	false
+);
+projSept.addEventListener(
+	"touchend",
+	function (event) {
+		touchendX = event.changedTouches[0].screenX;
+		handleGesture(projSix, projSept, projUn, six, un);
+	},
+	false
+);
+function handleGesture(nbboxprev, nbboxnow, nbboxnext, textprev, textnext) {
+	if (touchendX < touchstartX) {
+		console.log("Swiped Left");
+		nbboxnow.style.display = "none";
+		nbboxnext.style.display = "flex";
+		detail.innerHTML = textnext;
+	}
+	if (touchendX > touchstartX) {
+		console.log("Swiped Right");
+		nbboxnow.style.display = "none";
+		nbboxprev.style.display = "flex";
+		detail.innerHTML = textprev;
+	}
+}

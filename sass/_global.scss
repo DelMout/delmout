@@ -4,6 +4,9 @@ body {
 	color: white;
 	font-family: "acme", Arial, Helvetica, sans-serif;
 }
+h1 {
+	text-align: center;
+}
 
 a:link,
 a:visited,
@@ -30,7 +33,6 @@ a {
 	width: 2rem;
 	cursor: pointer;
 	position: absolute;
-	right: 10rem;
 	opacity: 0.5;
 	&:hover {
 		opacity: 1;
@@ -102,14 +104,14 @@ a {
 	top: 103vh;
 }
 .logofonc {
-	top: 203vh;
+	top: 204vh;
 	width: 3%;
 	position: absolute;
 	left: 3vw;
 	cursor: pointer;
 }
 .logotech {
-	top: 303vh;
+	top: 304vh;
 	width: 3%;
 	position: absolute;
 	left: 3vw;
@@ -190,5 +192,89 @@ a {
 	margin-right: 4rem;
 	& #update {
 		text-align: right;
+	}
+}
+
+/******MEDIA QUERIES*******/
+@media only screen and (max-width: 1450px) {
+	//#real avec height à 125vh.
+	.fonc {
+		top: 229vh;
+	}
+	.foncu {
+		top: 229vh;
+	}
+	.foncmenu {
+		top: 233vh;
+	}
+	.tech {
+		top: 329vh;
+	}
+	.techu {
+		top: 329vh;
+	}
+	.techmenu {
+		top: 333vh;
+	}
+
+	// Logo DMDW
+	.logofonc {
+		top: 229vh;
+	}
+	.logotech {
+		top: 329vh;
+	}
+}
+@media only screen and (max-width: 992px) {
+	//#real avec height à 100vh.
+	.back {
+		width: 1.5rem;
+	}
+	.real {
+		right: 3rem;
+	}
+	.realu,
+	.realvideo {
+		right: 1rem;
+	}
+	.fonc {
+		top: 204vh;
+		right: 3rem;
+	}
+
+	.foncu {
+		top: 204vh;
+		right: 1rem;
+	}
+	.foncmenu {
+		top: 208vh;
+	}
+	.tech {
+		top: 304vh;
+		right: 3rem;
+	}
+	.techu {
+		top: 304vh;
+		right: 1rem;
+	}
+	.techmenu {
+		top: 308vh;
+	}
+
+	// Logo DMDW
+	.logofonc {
+		top: 204vh;
+	}
+	.logotech {
+		top: 304vh;
+	}
+}
+@media only screen and (max-width: 670px) {
+	#real h2,
+	#fonc h2,
+	#tech h2 {
+		font-size: 1.5rem;
+		text-align: center;
+		margin-top: 4rem;
 	}
 }
