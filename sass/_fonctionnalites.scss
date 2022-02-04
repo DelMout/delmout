@@ -65,3 +65,33 @@
 		right: 3vw;
 	}
 }
+
+/******MEDIA QUERIES*******/
+@media only screen and (max-width: 992px) {
+	#fonc {
+		& #left,
+		#right {
+			display: none;
+		}
+		& #develop {
+			& h3 {
+				font-size: 2rem;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 670px) {
+	#fonc {
+		& #develop {
+			& h3 {
+				font-size: 1.5rem;
+			}
+			& > div {
+				width: 95%;
+				& ul {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+}

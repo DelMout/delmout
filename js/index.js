@@ -128,8 +128,8 @@ function nextOne(uno, dos) {
 	uno.style.display = "none";
 	dos.style.display = "block";
 }
-const pushRight = document.getElementById("right");
-pushRight.addEventListener("click", function () {
+
+function goRight() {
 	if (localStorage.getItem("projet") === null) {
 		localStorage.setItem("projet", 1);
 	} else {
@@ -143,10 +143,14 @@ pushRight.addEventListener("click", function () {
 	const uno = allDiv[parseInt(localStorage.getItem("projet")) - 1];
 	const dos = allDiv[parseInt(localStorage.getItem("projet"))];
 	nextOne(uno, dos);
+}
+
+const pushRight = document.getElementById("right");
+pushRight.addEventListener("click", function () {
+	goRight();
 });
 
-const pushLeft = document.getElementById("left");
-pushLeft.addEventListener("click", function () {
+function goLeft() {
 	if (localStorage.getItem("projet") === null) {
 		localStorage.setItem("projet", 0);
 	} else {
@@ -160,6 +164,11 @@ pushLeft.addEventListener("click", function () {
 	const uno = allDiv[parseInt(localStorage.getItem("projet")) + 1];
 	const dos = allDiv[parseInt(localStorage.getItem("projet")) + 0];
 	nextOne(uno, dos);
+}
+
+const pushLeft = document.getElementById("left");
+pushLeft.addEventListener("click", function () {
+	goLeft();
 });
 
 // Clear localStorage si page reload
@@ -167,8 +176,37 @@ document.addEventListener("DOMContentLoaded", function () {
 	localStorage.clear();
 });
 
+// Push carousel with swipe !
+const boxCarousel = document.getElementById("develop");
+boxCarousel.addEventListener(
+	"touchstart",
+	function (event) {
+		touchstartX = event.changedTouches[0].screenX;
+	},
+	false
+);
+boxCarousel.addEventListener(
+	"touchend",
+	function (event) {
+		touchendX = event.changedTouches[0].screenX;
+		swipe();
+	},
+	false
+);
+function swipe() {
+	if (touchendX < touchstartX) {
+		console.log("Swiped Left");
+		goLeft();
+	}
+	if (touchendX > touchstartX) {
+		console.log("Swiped Right");
+		goRight();
+	}
+}
+
 //! * #Realisations for format Tablet
-if (window.matchMedia("(max-width:992px)")) {
+const mediaQuery = window.matchMedia("(max-width:992px)");
+if (mediaQuery.matches) {
 	const selec = document.getElementById("selec");
 	selec.innerHTML = "Faire défiler les projets et cliquer sur le projet pour visionner.";
 	detail.innerHTML = un;
@@ -179,125 +217,125 @@ if (window.matchMedia("(max-width:992px)")) {
 	projCinq.style.display = "none";
 	projSix.style.display = "none";
 	projSept.style.display = "none";
-}
 
-//* Swipe on box of realisations
-projUn.addEventListener(
-	"touchstart",
-	function (event) {
-		touchstartX = event.changedTouches[0].screenX;
-	},
-	false
-);
-projUn.addEventListener(
-	"touchend",
-	function (event) {
-		touchendX = event.changedTouches[0].screenX;
-		handleGesture(projSept, projUn, projDeux, sept, deux);
-	},
-	false
-);
-projDeux.addEventListener(
-	"touchstart",
-	function (event) {
-		touchstartX = event.changedTouches[0].screenX;
-	},
-	false
-);
-projDeux.addEventListener(
-	"touchend",
-	function (event) {
-		touchendX = event.changedTouches[0].screenX;
-		handleGesture(projUn, projDeux, projTrois, un, trois);
-	},
-	false
-);
-projTrois.addEventListener(
-	"touchstart",
-	function (event) {
-		touchstartX = event.changedTouches[0].screenX;
-	},
-	false
-);
-projTrois.addEventListener(
-	"touchend",
-	function (event) {
-		touchendX = event.changedTouches[0].screenX;
-		handleGesture(projDeux, projTrois, projQuatre, deux, quatre);
-	},
-	false
-);
-projQuatre.addEventListener(
-	"touchstart",
-	function (event) {
-		touchstartX = event.changedTouches[0].screenX;
-	},
-	false
-);
-projQuatre.addEventListener(
-	"touchend",
-	function (event) {
-		touchendX = event.changedTouches[0].screenX;
-		handleGesture(projTrois, projQuatre, projCinq, trois, cinq);
-	},
-	false
-);
-projCinq.addEventListener(
-	"touchstart",
-	function (event) {
-		touchstartX = event.changedTouches[0].screenX;
-	},
-	false
-);
-projCinq.addEventListener(
-	"touchend",
-	function (event) {
-		touchendX = event.changedTouches[0].screenX;
-		handleGesture(projQuatre, projCinq, projSix, quatre, six);
-	},
-	false
-);
-projSix.addEventListener(
-	"touchstart",
-	function (event) {
-		touchstartX = event.changedTouches[0].screenX;
-	},
-	false
-);
-projSix.addEventListener(
-	"touchend",
-	function (event) {
-		touchendX = event.changedTouches[0].screenX;
-		handleGesture(projCinq, projSix, projSept, cinq, sept);
-	},
-	false
-);
-projSept.addEventListener(
-	"touchstart",
-	function (event) {
-		touchstartX = event.changedTouches[0].screenX;
-	},
-	false
-);
-projSept.addEventListener(
-	"touchend",
-	function (event) {
-		touchendX = event.changedTouches[0].screenX;
-		handleGesture(projSix, projSept, projUn, six, un);
-	},
-	false
-);
-function handleGesture(nbboxprev, nbboxnow, nbboxnext, textprev, textnext) {
-	if (touchendX < touchstartX) {
-		console.log("Swiped Left");
-		nbboxnow.style.display = "none";
-		nbboxnext.style.display = "flex";
-		detail.innerHTML = textnext;
-	}
-	if (touchendX > touchstartX) {
-		console.log("Swiped Right");
-		nbboxnow.style.display = "none";
-		nbboxprev.style.display = "flex";
-		detail.innerHTML = textprev;
+	//* Swipe on box of realisations
+	projUn.addEventListener(
+		"touchstart",
+		function (event) {
+			touchstartX = event.changedTouches[0].screenX;
+		},
+		false
+	);
+	projUn.addEventListener(
+		"touchend",
+		function (event) {
+			touchendX = event.changedTouches[0].screenX;
+			handleGesture(projSept, projUn, projDeux, sept, deux);
+		},
+		false
+	);
+	projDeux.addEventListener(
+		"touchstart",
+		function (event) {
+			touchstartX = event.changedTouches[0].screenX;
+		},
+		false
+	);
+	projDeux.addEventListener(
+		"touchend",
+		function (event) {
+			touchendX = event.changedTouches[0].screenX;
+			handleGesture(projUn, projDeux, projTrois, un, trois);
+		},
+		false
+	);
+	projTrois.addEventListener(
+		"touchstart",
+		function (event) {
+			touchstartX = event.changedTouches[0].screenX;
+		},
+		false
+	);
+	projTrois.addEventListener(
+		"touchend",
+		function (event) {
+			touchendX = event.changedTouches[0].screenX;
+			handleGesture(projDeux, projTrois, projQuatre, deux, quatre);
+		},
+		false
+	);
+	projQuatre.addEventListener(
+		"touchstart",
+		function (event) {
+			touchstartX = event.changedTouches[0].screenX;
+		},
+		false
+	);
+	projQuatre.addEventListener(
+		"touchend",
+		function (event) {
+			touchendX = event.changedTouches[0].screenX;
+			handleGesture(projTrois, projQuatre, projCinq, trois, cinq);
+		},
+		false
+	);
+	projCinq.addEventListener(
+		"touchstart",
+		function (event) {
+			touchstartX = event.changedTouches[0].screenX;
+		},
+		false
+	);
+	projCinq.addEventListener(
+		"touchend",
+		function (event) {
+			touchendX = event.changedTouches[0].screenX;
+			handleGesture(projQuatre, projCinq, projSix, quatre, six);
+		},
+		false
+	);
+	projSix.addEventListener(
+		"touchstart",
+		function (event) {
+			touchstartX = event.changedTouches[0].screenX;
+		},
+		false
+	);
+	projSix.addEventListener(
+		"touchend",
+		function (event) {
+			touchendX = event.changedTouches[0].screenX;
+			handleGesture(projCinq, projSix, projSept, cinq, sept);
+		},
+		false
+	);
+	projSept.addEventListener(
+		"touchstart",
+		function (event) {
+			touchstartX = event.changedTouches[0].screenX;
+		},
+		false
+	);
+	projSept.addEventListener(
+		"touchend",
+		function (event) {
+			touchendX = event.changedTouches[0].screenX;
+			handleGesture(projSix, projSept, projUn, six, un);
+		},
+		false
+	);
+	function handleGesture(nbboxprev, nbboxnow, nbboxnext, textprev, textnext) {
+		if (touchendX < touchstartX) {
+			console.log("Swiped Left");
+			nbboxnow.style.display = "none";
+			nbboxnext.style.display = "flex";
+			detail.innerHTML = textnext;
+		}
+		if (touchendX > touchstartX) {
+			console.log("Swiped Right");
+			nbboxnow.style.display = "none";
+			nbboxprev.style.display = "flex";
+			detail.innerHTML = textprev;
+		}
 	}
 }

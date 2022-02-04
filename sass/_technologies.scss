@@ -37,3 +37,33 @@
 		}
 	}
 }
+
+/******MEDIA QUERIES*******/
+@media only screen and (max-width: 1450px) {
+	#tech {
+		& #util {
+			& > div {
+				width: 20%;
+				margin-left: 2rem;
+				margin-right: 2rem;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 670px) {
+	#tech {
+		& #util {
+			flex-direction: column;
+			// background-color: yellow;
+			margin-top: 0;
+			align-items: center;
+			& > div {
+				width: 40%;
+				margin-bottom: 2rem;
+			}
+			& h3 {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
