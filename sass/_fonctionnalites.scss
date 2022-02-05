@@ -1,7 +1,5 @@
 #fonc {
-	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-		url("../images/fonction.jpg");
-	background-size: 100% 100%;
+	background-image: linear-gradient(to bottom, #101d43, #075a76);
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -82,6 +80,7 @@
 }
 @media only screen and (max-width: 670px) {
 	#fonc {
+		height: 140vh;
 		& #develop {
 			& h3 {
 				font-size: 1.5rem;

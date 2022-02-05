@@ -23,9 +23,20 @@ a {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 	position: relative;
-	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 160px #fff;
-	/* background-color: yellow; */
+	// text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 160px #fff;
+	// background-color: yellow;
 	text-transform: uppercase;
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		// width: 100%;
+		height: 2px;
+		background-color: white;
+		animation: underline_title 3s infinite ease-out;
+		box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #fff, 0 0 16px #fff;
+	}
 }
 
 //* icons for Back to home and Menu
@@ -276,5 +287,10 @@ a {
 		font-size: 1.5rem;
 		text-align: center;
 		margin-top: 4rem;
+	}
+	.logoreal,
+	.logofonc,
+	.logotech {
+		display: none;
 	}
 }

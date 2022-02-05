@@ -1,3 +1,46 @@
+#perso {
+	background-image: linear-gradient(to left, #02080f, #101d43);
+	display: flex;
+	& #expe {
+		font-size: 1.5rem;
+		display: flex;
+		margin-left: 15vw;
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+		& ul {
+			margin: auto;
+			& li {
+				margin-top: 0.2rem;
+				margin-bottom: 0.2rem;
+			}
+		}
+	}
+	& #linkedin {
+		display: flex;
+		margin-left: 20vw;
+		& a {
+			margin-top: auto;
+			margin-bottom: 2rem;
+		}
+		& img {
+			width: 50px;
+		}
+	}
+}
+
+#moi {
+	width: 15%;
+	//! Ici à revoir avec max-width
+	overflow: hidden;
+	// background-color: pink;
+
+	& img {
+		width: 100%;
+		margin-bottom: 20px;
+		animation: appear 2s ease-out;
+	}
+}
+
 #footer {
 	background-color: #02080f;
 	margin-top: 0;
