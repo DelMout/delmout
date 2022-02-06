@@ -2,13 +2,19 @@
 	background-image: linear-gradient(to left, #02080f, #101d43);
 	display: flex;
 	& #expe {
+		// background-color: yellowgreen;
+		width: 50%;
+
 		font-size: 1.5rem;
 		display: flex;
-		margin-left: 15vw;
-		margin-top: 3rem;
-		margin-bottom: 3rem;
+		margin-left: 0;
+		margin-right: 0;
+
 		& ul {
-			margin: auto;
+			margin-top: 3rem;
+			margin-bottom: 3rem;
+			margin-left: auto;
+			margin-right: auto;
 			& li {
 				margin-top: 0.2rem;
 				margin-bottom: 0.2rem;
@@ -16,11 +22,17 @@
 		}
 	}
 	& #linkedin {
+		// background-color: pink;
+		width: 20%;
 		display: flex;
-		margin-left: 20vw;
+		margin-left: 0;
+		margin-right: auto;
+
 		& a {
 			margin-top: auto;
 			margin-bottom: 2rem;
+			margin-right: auto;
+			margin-left: auto;
 		}
 		& img {
 			width: 50px;
@@ -29,15 +41,14 @@
 }
 
 #moi {
-	width: 15%;
-	//! Ici à revoir avec max-width
-	overflow: hidden;
+	width: 20%;
 	// background-color: pink;
+	display: flex;
 
 	& img {
-		width: 100%;
-		margin-bottom: 20px;
-		animation: appear 2s ease-out;
+		max-width: 300px;
+		margin: auto;
+		margin-bottom: 2rem;
 	}
 }
 
@@ -52,5 +63,52 @@
 		margin-right: 2rem;
 		margin-left: 2rem;
 		font-size: 1.2rem;
+	}
+}
+/******MEDIA QUERIES*******/
+@media only screen and (max-width: 1750px) {
+	#perso {
+		& #expe {
+			width: 50%;
+			margin-left: auto;
+			margin-right: auto;
+
+			& ul {
+				margin-top: 3rem;
+				margin-bottom: 3rem;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		& #linkedin {
+			width: 20%;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+
+	#moi {
+		width: 30%;
+		& img {
+			max-width: 230px;
+			margin: auto;
+		}
+	}
+}
+@media only screen and (max-width: 992px) {
+	#perso {
+		flex-direction: column;
+		& #expe {
+			width: 100%;
+		}
+		& #linkedin {
+			width: 100%;
+		}
+	}
+
+	#moi {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
