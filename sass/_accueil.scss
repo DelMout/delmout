@@ -7,7 +7,7 @@
 #une {
 	display: flex;
 	// background-color: yellow;
-	margin-top: 10%;
+	margin-top: 8%;
 }
 
 #crea {
@@ -86,21 +86,21 @@ h2 {
 		box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #fff, 0 0 16px #fff;
 
 		&:nth-child(1) {
-			top: -72px;
+			top: 32px;
 			z-index: 2;
 			animation-name: blind, fall;
 			animation-duration: 4s, 4s;
 			animation-delay: 0s, 4s;
 		}
 		&:nth-child(2) {
-			top: 40px;
+			top: 140px;
 			z-index: 1;
 			animation-name: blind, fall;
 			animation-duration: 2s, 4s;
 			animation-delay: 0s, 2s;
 		}
 		&:nth-child(3) {
-			top: 155px;
+			top: 255px;
 			z-index: 0;
 			animation: fall 4s ease-out;
 		}
@@ -123,17 +123,8 @@ h2 {
 	left: 3vw;
 	cursor: pointer;
 }
-.logoaccueil {
-	top: 3vh;
-}
 .logoreal {
 	top: 103vh;
-}
-.logoaccueil {
-	top: 3vh;
-}
-.logoaccueil {
-	top: 3vh;
 }
 #sigle {
 	font-size: 5rem;
@@ -209,9 +200,6 @@ h2 {
 
 /******MEDIA QUERIES*******/
 @media only screen and (max-width: 1750px) {
-	h1 {
-		// background-color: blueviolet;
-	}
 	#crea {
 		width: 40%;
 		font-size: 1rem;
@@ -285,15 +273,12 @@ h2 {
 		flex-direction: column;
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: 30%;
-		& #moi {
-			width: 40%;
-		}
-		& #moi {
-			margin: auto;
-		}
+		margin-top: 7rem;
+
 		& #crea {
 			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 	#menu {
@@ -302,13 +287,13 @@ h2 {
 		font-size: 1.2rem;
 		& a {
 			&:nth-child(1) {
-				top: 0px;
+				top: 40px;
 			}
 			&:nth-child(2) {
-				top: 90px;
+				top: 130px;
 			}
 			&:nth-child(3) {
-				top: 180px;
+				top: 220px;
 			}
 		}
 	}
