@@ -1,7 +1,9 @@
-### My eportfolio 👋
+### Developer web 👋
 
-Technologies used :
-HTML, CSS
+My competences are :
+Javascript, Node.js, Express.js, Vue.js, Vuex, Vue Router, MySQL, API REST, ...
+
+I develop sites and applications web. I am developer Backend and developer Frontend.
 
 <!--
 **DelMout/delmout** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
