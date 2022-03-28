@@ -1,4 +1,7 @@
-### Hi there 👋
+### My eportfolio 👋
+
+Technologies used :
+HTML, CSS
 
 <!--
 **DelMout/delmout** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
